@@ -13,6 +13,10 @@
  * Copyright 2010 Paul Maunders (http://www.pyrosoft.co.uk/blog/)
  */
 
+
+// Implements the SECVPN.validateCardFull method 
+// Documentation @ http://www.secpay.com/xmlrpc/realtimeTransaction.html
+
 function ValidateCardFull(
 
 	// Argument list same as old function to be backwards compatible
@@ -57,6 +61,9 @@ function ValidateCardFull(
 
 } 
 
+
+// Implements the SECVPN.repeatCardFullAddr method 
+// Documentation @ http://www.secpay.com/xmlrpc/repeatTransaction.html
 
 function RepeatCardFullAddr(
 
