@@ -4,10 +4,9 @@
 /*
  * secpay.php
  *	
- * PHP Secpay v0.1
+ * PHP Secpay
  * Some functions to help connect to Paypoint / Secpay's XMLRPC API. 
  *
- * Date: 2009-09-01
  * Requires: Zend Framework v1.8 or later
  * Licensed under the MIT license:
  *   http://www.opensource.org/licenses/mit-license.php
