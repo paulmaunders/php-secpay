@@ -100,6 +100,33 @@ function RepeatCardFullAddr(
 	
 }
 
+// Implements the SECVPN.refundCardFull method 
+// Documentation @ http://www.secpay.com/xmlrpc/refundTransaction.html
+
+function RefundCardFull(
+
+	$orig_trans_id,	
+	$amount,			
+	$new_trans_id
+
+	) {
+	
+	// https://www.secpay.com/xmlrpc/repeatTransaction.html
+	$values = array(
+	SECPAY_USER, // mid - Merchant ID
+	SECPAY_VPN_PASSWORD, // vpn_pswd - VPN Password
+	(string) $orig_trans_id, // trans_id - Transaction ID 
+	(string) $amount, // amount - Amount to charge
+	SECPAY_REMOTE_PASSWORD, // remote_pswd	- Remote Password
+	(string) $new_trans_id, // new_trans_id - New Transacton ID	
+	);
+
+	return secpay_xmlrpc_call('SECVPN.refundCardFull', $values);
+	
+}
+
+// Wraps Zend XMLRPC Client and makes the call to SecPay
+
 function secpay_xmlrpc_call ($call, $values) {
 
 	$client = new Zend_XmlRpc_Client('https://www.secpay.com/secxmlrpc/make_call');

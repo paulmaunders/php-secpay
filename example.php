@@ -21,7 +21,7 @@ require_once "secpay.php";
 	
 // Example use of the ValidateCardFull function	(to set up a new payment)
 	
-$options['test_status']='false';
+$options['test_status']='true';
 $options['dups']='true';
 $options['currency']='GBP';
 //$options['mail_merchants']='youremail@example.com';
@@ -29,8 +29,10 @@ $options['currency']='GBP';
 $options['usage_type']='R';
 $options['cv2']='123';
 
+$transaction_id = 'TEST_1_'.rand();
+
 $result = ValidateCardFull(
-	'TEST_1', // trans_id - Transaction ID 
+	$transaction_id, // trans_id - Transaction ID 
 	'123.123.123.123', // ip - IP Address
 	'mr test test', // name - Cardholder Name
 	'4444333322221111', // card_number - Card Number
@@ -47,19 +49,15 @@ $result = ValidateCardFull(
 
 var_dump($result);
 
-
-
-
-
 // Example use of the RepeatCardFullAddr function (for repeat payments)
 	
-$options['test_status']='false';
+$options['test_status']='true';
 $options['usage_type']='R';
 
 $result = RepeatCardFullAddr(
-	'TEST_1',	
+	$transaction_id,	
 	'2',			
-	'TEST_1_REPEAT_'.time(),	
+	$transaction_id.'_REPEAT_'.time(),	
 	$exp_date="", 	
 	$order ="", 	   
 	$shipping ="", 	 
@@ -67,6 +65,15 @@ $result = RepeatCardFullAddr(
 	$options	
 );
 
+var_dump($result);
+
+// Example use of the RefundCardFull function (for refunding payments)
+
+$result = RefundCardFull(
+	$transaction_id,	
+	1,			
+	$transaction_id.'_REFUND_'.time()	
+);
 
 var_dump($result);
 
