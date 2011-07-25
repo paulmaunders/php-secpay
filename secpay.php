@@ -41,7 +41,7 @@ function ValidateCardFull(
 	// http://www.secpay.com/xmlrpc/realtimeTransaction.html			
 	$values = array(
 	SECPAY_USER, // mid - Merchant ID
-	SECPAY_PASSWORD, // vpn_pswd - VPN Password
+	SECPAY_VPN_PASSWORD, // vpn_pswd - VPN Password
 	(string) $transId, // trans_id - Transaction ID 
 	(string) $ip, // ip - IP Address
 	(string) $name, // name - Cardholder Name
@@ -84,7 +84,7 @@ function RepeatCardFullAddr(
 	// https://www.secpay.com/xmlrpc/repeatTransaction.html
 	$values = array(
 	SECPAY_USER, // mid - Merchant ID
-	SECPAY_PASSWORD, // vpn_pswd - VPN Password
+	SECPAY_VPN_PASSWORD, // vpn_pswd - VPN Password
 	(string) $orig_trans_id, // trans_id - Transaction ID 
 	(string) $amount, // amount - Amount to charge
 	SECPAY_REMOTE_PASSWORD, // remote_pswd	- Remote Password

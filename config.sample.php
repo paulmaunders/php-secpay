@@ -3,7 +3,7 @@
 // Define passwords
 
 define('SECPAY_USER', 'secpay');
-define('SECPAY_PASSWORD', 'secpay');
+define('SECPAY_VPN_PASSWORD', 'secpay');
 define("SECPAY_REMOTE_PASSWORD", "secpay"); 
 
 // Setup include path for Zend Framework
