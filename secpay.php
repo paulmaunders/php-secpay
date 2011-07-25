@@ -81,7 +81,7 @@ function RepeatCardFullAddr(
 	
 	$options = http_build_query($options); // Convert array to query string
 	
-	// https://www.secpay.com/xmlrpc/repeatTransaction.html
+	// http://www.secpay.com/xmlrpc/repeatTransaction.html
 	$values = array(
 	SECPAY_USER, // mid - Merchant ID
 	SECPAY_VPN_PASSWORD, // vpn_pswd - VPN Password
@@ -111,7 +111,7 @@ function RefundCardFull(
 
 	) {
 	
-	// https://www.secpay.com/xmlrpc/repeatTransaction.html
+	// http://www.secpay.com/xmlrpc/refundTransaction.html
 	$values = array(
 	SECPAY_USER, // mid - Merchant ID
 	SECPAY_VPN_PASSWORD, // vpn_pswd - VPN Password
