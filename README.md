@@ -1,18 +1,13 @@
-+------------+
-| PHP Secpay |
-+------------+
+
+# PHP Secpay
 
 PHP Secpay is a set of simple functions to allow you to connect to PayPoint / Secpay's XMLRPC API.
 
-+--------------+
-| Requirements |
-+--------------+
+## Requirements 
 
 You will need a copy of Zend Framework (v1.8 or newer)
 
-+--------------+
-| Instructions |
-+--------------+
+### Instructions
 
 Set the test_status as follows:
 
@@ -20,9 +15,7 @@ Set the test_status as follows:
  * true - test mode, always succeed
  * live - live mode will actually attempt to process the payment
 
-+---------+
-| License | 
-+---------+
+### License
 
 Copyright (c) 2010, Paul Maunders (http://www.pyrosoft.co.uk/blog/)
 
