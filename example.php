@@ -14,26 +14,10 @@
  * Copyright 2010 Paul Maunders (http://www.pyrosoft.co.uk/blog/)
  */
 
-$includePaths = array();
-
-// Define path to Zend Framework
-// Download a copy from http://framework.zend.com/releases/ZendFramework-1.10.3/ZendFramework-1.10.3-minimal.tar.gz
-
-$includePaths[] = '/usr/share/php/ZendFramework-1.10.3-minimal/library';
-$includePaths[] = get_include_path();
-
-set_include_path(join(PATH_SEPARATOR, $includePaths));
-
+require_once "config.php";
 require_once 'Zend/XmlRpc/Client.php';
+require_once "secpay.php";
 
-include "secpay.php";
-
-// Define passwords
-
-define('SECPAY_USER', 'secpay');
-define('SECPAY_PASSWORD', 'secpay');
-define("SECPAY_REMOTE_PASSWORD", "secpay"); 
-	
 	
 // Example use of the ValidateCardFull function	(to set up a new payment)
 	
